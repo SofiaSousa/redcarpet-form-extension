@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build + Publish
+    name: Build + Lint + Test
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -17,9 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.1.x
+        # ruby-version: 3.1.x # Not needed with a .ruby-version file
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
     - name: Run lint
