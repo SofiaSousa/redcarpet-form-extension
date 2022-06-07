@@ -1,4 +1,6 @@
-require "redcarpet/form/extension/version"
+# frozen_string_literal: true
+
+require 'redcarpet/form/extension/version'
 
 module Redcarpet
   module Form
