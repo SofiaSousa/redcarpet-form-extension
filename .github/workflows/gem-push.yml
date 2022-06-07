@@ -16,12 +16,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Ruby 2.6
+    - name: Set up Ruby
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        ruby-version: 3.1.x
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+    - name: Run lint
+      run: bundle exec rubocop
+
+    - name: Run tests
+      run: bundle exec rspec
 
     - name: Publish to GPR
+      if: false # always skip job
       run: |
         mkdir -p $HOME/.gem
         touch $HOME/.gem/credentials
@@ -34,6 +42,7 @@ jobs:
         OWNER: ${{ github.repository_owner }}
 
     - name: Publish to RubyGems
+      if: false # always skip job
       run: |
         mkdir -p $HOME/.gem
         touch $HOME/.gem/credentials
