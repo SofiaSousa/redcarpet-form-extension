@@ -1,0 +1,28 @@
+# frozen_string_literal: true
+
+module Redcarpet
+  module Form
+    module Extension
+      module Inline
+        # A single input tag
+        #
+        # Ex: ____{ type="number" }
+        # <input type="number" name="123465" />
+        class Input
+          def self.pattern
+            /(____)(\{(.+)\})?/
+          end
+
+          def self.default_attributes
+            { 'type' => 'text', 'name' => '' }
+          end
+
+          def self.html(text)
+            attrs = default_attributes.merge!(Util.parse_attributes(text))
+            "<input #{Util.attributes_to_s(attrs)} />"
+          end
+        end
+      end
+    end
+  end
+end
