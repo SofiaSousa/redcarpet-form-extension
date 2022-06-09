@@ -21,3 +21,6 @@ gem 'rubocop-rspec'
 
 # Byebug is a simple to use and feature rich debugger for Ruby.
 gem 'byebug'
+
+# Code coverage for Ruby
+gem 'simplecov', require: false, group: :test
