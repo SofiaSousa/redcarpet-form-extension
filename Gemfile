@@ -24,3 +24,6 @@ gem 'byebug'
 
 # Code coverage for Ruby
 gem 'simplecov', require: false, group: :test
+
+# A gem to bump versions of gems and chef-cookbooks.
+gem 'bump'
