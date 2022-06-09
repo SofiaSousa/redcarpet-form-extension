@@ -4,6 +4,7 @@ module Redcarpet
   module Form
     module Extension
       module Block
+        # rubocop:disable Layout/LineLength
         # A fieldset with checkboxes
         #
         # Ex: []{value="bike"} I have a bike [x]{value="car"} I have a car [x]{value="boat"} I have a boat
@@ -12,6 +13,7 @@ module Redcarpet
         #   <label><input type="checkbox" name="123456[]" value="car" checked />I have a car</label>
         #   <label><input type="checkbox" name="123456[]" value="boat" checked />I have a boat</label>
         # </fieldset>
+        # rubocop:enable Layout/LineLength
         class Checkboxes
           def self.pattern
             /\[(x|\s)?\]([{][^}]*[}])?([^{}\]\[]*)/
@@ -21,6 +23,8 @@ module Redcarpet
             { 'type' => 'checkbox', 'name' => '', 'value' => '' }
           end
 
+          # rubocop:disable Metrics/MethodLength
+          # rubocop:disable Metrics/AbcSize
           def self.html(matches)
             html = '<fieldset>'
             name = "#{Util.random_string}[]"
@@ -42,6 +46,8 @@ module Redcarpet
 
             html += '</fieldset>'
           end
+          # rubocop:enable Metrics/AbcSize
+          # rubocop:enable Metrics/MethodLength
         end
       end
     end

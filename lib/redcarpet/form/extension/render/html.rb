@@ -25,9 +25,7 @@ module Redcarpet
 
             # Inline tags
             inline_tags.each do |klass|
-              text.gsub!(klass.pattern) do |sub|
-                klass.html(sub)
-              end
+              text.gsub!(klass.pattern) { |sub| klass.html(sub) }
             end
 
             # Block tags (replace line)

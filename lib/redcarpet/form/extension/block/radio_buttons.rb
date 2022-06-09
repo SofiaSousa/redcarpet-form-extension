@@ -14,13 +14,15 @@ module Redcarpet
         # </fieldset>
         class RadioButtons
           def self.pattern
-            /\((x|\s)?\)([{][^}]*[}])?([^{}\)\()]*)/
+            /\((x|\s)?\)([{][^}]*[}])?([^{})()]*)/
           end
 
           def self.default_attributes
             { 'type' => 'radio', 'name' => '', 'value' => '' }
           end
 
+          # rubocop:disable Metrics/MethodLength
+          # rubocop:disable Metrics/AbcSize
           def self.html(matches)
             html = '<fieldset>'
             name = Util.random_string
@@ -42,6 +44,8 @@ module Redcarpet
 
             html += '</fieldset>'
           end
+          # rubocop:enable Metrics/AbcSize
+          # rubocop:enable Metrics/MethodLength
         end
       end
     end

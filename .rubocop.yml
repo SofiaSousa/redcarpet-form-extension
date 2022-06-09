@@ -57,8 +57,9 @@ Layout/HashAlignment:
 
 Layout/LineLength:
   Max: 100
-  AllowedPatterns:
-    - !ruby/regexp /\A +(it|describe|context|shared_examples|include_examples|it_behaves_like) ["']/
+  Exclude:
+    - 'redcarpet-form-extension.gemspec'
+    - 'spec/**/*.rb'
 
 Lint/InterpolationCheck:
   Exclude:

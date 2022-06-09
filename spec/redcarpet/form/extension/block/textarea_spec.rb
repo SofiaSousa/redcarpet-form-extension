@@ -5,10 +5,14 @@ RSpec.describe Redcarpet::Form::Extension::Block::Textarea do
     it 'returns a fieldset with an emty textarea' do
       allow(Redcarpet::Form::Extension::Util).to receive(:random_string).and_return('123456')
 
-      text = [['{}', '']]
-      expect(described_class.html(text)).to eq('<fieldset><textarea name="123456" rows="3"></textarea></fieldset>')
-
       text = [['', '']]
+      expect(described_class.html(text)).to eq('<fieldset><textarea name="123456" rows="3"></textarea></fieldset>')
+    end
+
+    it 'returns a fieldset with an emty textarea (empty attrs)' do
+      allow(Redcarpet::Form::Extension::Util).to receive(:random_string).and_return('123456')
+
+      text = [['{}', '']]
       expect(described_class.html(text)).to eq('<fieldset><textarea name="123456" rows="3"></textarea></fieldset>')
     end
 
