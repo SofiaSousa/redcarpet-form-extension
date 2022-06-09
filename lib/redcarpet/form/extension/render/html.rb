@@ -13,7 +13,6 @@ module Redcarpet
         # Custom HTML render
         class HTML < Redcarpet::Render::HTML
           def paragraph(text)
-            # process_custom_tags("<p>#{text.strip}</p>\n")
             process_custom_tags(text.strip)
           end
 
@@ -28,14 +27,14 @@ module Redcarpet
               text.gsub!(klass.pattern) { |sub| klass.html(sub) }
             end
 
-            # Block tags (replace line)
+            # Block tags (replace entire line)
             block_tags.each do |klass|
               next unless text.match?(klass.pattern)
 
               return klass.html(text.scan(klass.pattern))
             end
 
-            text
+            "<p>#{text}</p>\n"
           end
 
           # List of inline tags
