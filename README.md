@@ -1,8 +1,6 @@
 # Redcarpet::Form::Extension
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/redcarpet/form/extension`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A [Redcarpet](https://github.com/vmg/redcarpet) extension with a custom HTML render to handle custom Markdown rules for tags like inputs and textareas.
 
 ## Installation
 
@@ -22,7 +20,85 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+# Initializes a Markdown parser with Redcarpet::Form::Extension::Render::HTML
+markdown = Redcarpet::Markdown.new(Redcarpet::Form::Extension::Render::HTML)
+```
+
+### Input (inline)
+
+Use the follwoing snap code to add an input tag in your html. By default, tag attributes are `type="text" name=""` but you can use `{}` to pass the attributes you need:
+
+```txt
+Some text before ____{ type="number" } and after.
+```
+
+Returns:
+
+```html
+<input type="number" name="" />
+````
+
+### Checkboxes
+
+Also, you can create your fieldset of checkboxes:
+
+```text
+[]{value="bike"} I have a bike [x]{value="car"} I have a car [x]{value="boat"} I have a boat
+```
+
+This snap returns the following HTML:
+
+```html
+<fieldset>
+    <label><input type="checkbox" name="xekiry[]" value="bike" />I have a bike</label>
+    <label><input type="checkbox" name="xekiry[]" value="car" checked />I have a car</label>
+    <label><input type="checkbox" name="xekiry[]" value="boat" checked />I have a boat</label>
+</fieldset>
+```
+
+**Note:** If `name` attribute is not passed, a temporary and random string will be generated. For empty
+`value`s, a `opt_` string follwed by the element index will be placed.
+
+### Radio Buttons
+
+For a radio buttons group, you can type the following:
+
+```txt
+() HTML (x) CSS () JavaScript
+```
+
+which will return:
+
+```html
+<fieldset>
+    <label><input type="radio" name="ybqkvo" value="radio_1" />HTML</label>
+    <label><input type="radio" name="ybqkvo" value="radio_2" checked />CSS</label>
+    <label><input type="radio" name="ybqkvo" value="radio_3" />JavaScript</label>
+</fieldset>
+```
+
+**Note:** If `name` attribute is not passed, a temporary and random string will be generated. For empty
+`value`s, a `radio_` string follwed by the element index will be placed.
+
+### Textarea
+
+Finally, a textarea can be generated using the follwing snap:
+
+```txt
+[textarea]{value="Hello world!" rows="4" cols="10"} Text box
+```
+
+The HTML result is:
+
+```html
+<fieldset>
+    <label>Text box</label>
+    <textarea name="kaatyu" rows="4" cols="10">
+        Hello world!
+    </textarea>
+</fieldset>
+````
 
 ## Development
 
@@ -32,8 +108,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/redcarpet-form-extension. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/redcarpet-form-extension/blob/master/CODE_OF_CONDUCT.md).
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/SofiaSousa/redcarpet-form-extension. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/SofiaSousa/redcarpet-form-extension/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -41,4 +116,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Redcarpet::Form::Extension project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/redcarpet-form-extension/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Redcarpet::Form::Extension project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/SofiaSousa/redcarpet-form-extension/blob/master/CODE_OF_CONDUCT.md).

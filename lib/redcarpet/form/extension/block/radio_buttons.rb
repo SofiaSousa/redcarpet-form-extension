@@ -6,11 +6,11 @@ module Redcarpet
       module Block
         # A fieldset with radion buttons
         #
-        # Ex: () HTML (x) CSS () JavaScript
+        # Ex: (){value="html"} HTML (x){value="css"} CSS (){value="js"} JavaScript
         # <fieldset>
-        #   <label><input type="radio" name="123456" value="HTML" />HTML</label>
-        #   <label><input type="radio" name="123456" value="CSS" />CSS</label>
-        #   <label><input type="radio" name="123456" value="JavaScript" />JavaScript</label>
+        #   <label><input type="radio" name="123456" value="html" />HTML</label>
+        #   <label><input type="radio" name="123456" value="css" checked />CSS</label>
+        #   <label><input type="radio" name="123456" value="js" />JavaScript</label>
         # </fieldset>
         class RadioButtons
           def self.pattern

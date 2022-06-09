@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Sofia Sousa']
   spec.email         = ['csofiamsousa@gmail.com']
 
-  spec.summary       = 'Form extension for redcarpet'
-  spec.description   = 'Form extension for redcarpet'
+  spec.summary       = 'A Redcarpet extension with a custom HTML render to handle custom Markdown rules for tags like inputs and textareas'
+  spec.description   = 'A Redcarpet extension with a custom HTML render to handle custom Markdown rules for tags like inputs and textareas'
   spec.homepage      = 'https://github.com/SofiaSousa/redcarpet-form-extension'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 3.1.0')

@@ -19,4 +19,5 @@ gem 'rubocop-rake'
 # RSpec-specific analysis for your projects, as an extension to RuboCop.
 gem 'rubocop-rspec'
 
+# Byebug is a simple to use and feature rich debugger for Ruby.
 gem 'byebug'

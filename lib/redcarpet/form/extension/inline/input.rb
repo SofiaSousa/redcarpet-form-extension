@@ -7,7 +7,7 @@ module Redcarpet
         # A single input tag
         #
         # Ex: ____{ type="number" }
-        # <input type="number" name="123465" />
+        # <input type="number" name="" />
         class Input
           def self.pattern
             /(____)(\{(.+)\})?/
