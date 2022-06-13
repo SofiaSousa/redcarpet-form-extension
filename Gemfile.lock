@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    redcarpet-form-extension (0.1.2)
+    redcarpet-form-extension (0.1.3)
       redcarpet (~> 3.5.1)
 
 GEM
