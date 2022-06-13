@@ -14,7 +14,7 @@ module Redcarpet
           end
 
           def self.default_attributes
-            { 'type' => 'text', 'name' => '' }
+            { 'type' => 'text', 'name' => Util.random_string }
           end
 
           def self.html(text)

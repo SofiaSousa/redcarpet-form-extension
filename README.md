@@ -36,7 +36,7 @@ Some text before ____{ type="number" } and after.
 Returns:
 
 ```html
-<input type="number" name="" />
+<input type="number" name="gfkoyl" />
 ````
 
 ### Checkboxes
