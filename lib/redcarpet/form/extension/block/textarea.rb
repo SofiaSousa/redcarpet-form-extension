@@ -6,7 +6,7 @@ module Redcarpet
       module Block
         # A textarea block
         #
-        # Ex: [textarea]{value="Hello world!" rows="4" cols="10"} Text box
+        # Ex: [textarea]{ value="Hello world!" rows="4" cols="10" } Text box
         # <fieldset>
         #   <label>Text box</label>
         #   <textarea name="123456" rows="4" cols="10">

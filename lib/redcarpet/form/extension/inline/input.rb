@@ -6,11 +6,11 @@ module Redcarpet
       module Inline
         # A single input tag
         #
-        # Ex: ____{ type="number" }
+        # Ex: [input]{ type="number" }
         # <input type="number" name="" />
         class Input
           def self.pattern
-            /(____)(\{(.+)\})?/
+            /\[input\]([{][^}]*[}])?/
           end
 
           def self.default_attributes

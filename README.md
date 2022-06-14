@@ -27,10 +27,10 @@ markdown = Redcarpet::Markdown.new(Redcarpet::Form::Extension::Render::HTML)
 
 ### Input (inline)
 
-Use the follwoing snap code to add an input tag in your html. By default, tag attributes are `type="text" name=""` but you can use `{}` to pass the attributes you need:
+Use the follwoing snap code to add an input tag in your html. By default, tag attributes are `type="text" name="[random_string]"` but you can use `{}` to pass the attributes you need:
 
 ```txt
-Some text before ____{ type="number" } and after.
+Some text before [input]{ type="number" } and after.
 ```
 
 Returns:
@@ -44,7 +44,7 @@ Returns:
 Also, you can create your fieldset of checkboxes:
 
 ```text
-[]{value="bike"} I have a bike [x]{value="car"} I have a car [x]{value="boat"} I have a boat
+[]{ value="bike" } I have a bike [x]{ value="car" } I have a car [x]{ value="boat" } I have a boat
 ```
 
 This snap returns the following HTML:
@@ -86,7 +86,7 @@ which will return:
 Finally, a textarea can be generated using the follwing snap:
 
 ```txt
-[textarea]{value="Hello world!" rows="4" cols="10"} Text box
+[textarea]{ value="Hello world!" rows="4" cols="10" } Text box
 ```
 
 The HTML result is:
