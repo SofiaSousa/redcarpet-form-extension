@@ -51,9 +51,9 @@ This snap returns the following HTML:
 
 ```html
 <fieldset>
-    <label><input type="checkbox" name="xekiry[]" value="bike" />I have a bike</label>
-    <label><input type="checkbox" name="xekiry[]" value="car" checked />I have a car</label>
-    <label><input type="checkbox" name="xekiry[]" value="boat" checked />I have a boat</label>
+  <label><input type="checkbox" name="xekiry[]" value="bike" /><span>I have a bike</span></label>
+  <label><input type="checkbox" name="xekiry[]" value="car" checked /><span>I have a car</span></label>
+  <label><input type="checkbox" name="xekiry[]" value="boat" checked /><span>I have a boat</span></label>
 </fieldset>
 ```
 
@@ -72,9 +72,9 @@ which will return:
 
 ```html
 <fieldset>
-    <label><input type="radio" name="ybqkvo" value="radio_1" />HTML</label>
-    <label><input type="radio" name="ybqkvo" value="radio_2" checked />CSS</label>
-    <label><input type="radio" name="ybqkvo" value="radio_3" />JavaScript</label>
+  <label><input type="radio" name="ybqkvo" value="radio_1" /><span>HTML</span></label>
+  <label><input type="radio" name="ybqkvo" value="radio_2" checked /><span>CSS</span></label>
+  <label><input type="radio" name="ybqkvo" value="radio_3" /><span>JavaScript</span></label>
 </fieldset>
 ```
 
@@ -93,10 +93,10 @@ The HTML result is:
 
 ```html
 <fieldset>
-    <label>Text box</label>
-    <textarea name="kaatyu" rows="4" cols="10">
-        Hello world!
-    </textarea>
+  <label>Text box</label>
+  <textarea name="kaatyu" rows="4" cols="10">
+     Hello world!
+  </textarea>
 </fieldset>
 ````
 

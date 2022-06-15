@@ -9,9 +9,9 @@ module Redcarpet
         #
         # Ex: []{value="bike"} I have a bike [x]{value="car"} I have a car [x]{value="boat"} I have a boat
         # <fieldset>
-        #   <label><input type="checkbox" name="123456[]" value="bike" />I have a bike</label>
-        #   <label><input type="checkbox" name="123456[]" value="car" checked />I have a car</label>
-        #   <label><input type="checkbox" name="123456[]" value="boat" checked />I have a boat</label>
+        #   <label><input type="checkbox" name="123456[]" value="bike" /><span>I have a bike</span></label>
+        #   <label><input type="checkbox" name="123456[]" value="car" checked /><span>I have a car</span></label>
+        #   <label><input type="checkbox" name="123456[]" value="boat" checked /><span>I have a boat</span></label>
         # </fieldset>
         # rubocop:enable Layout/LineLength
         class Checkboxes
@@ -41,7 +41,7 @@ module Redcarpet
               html += "<input #{Util.attributes_to_s(attrs)}"
               html += ' checked' if checked == 'x'
               html += ' />'
-              html += "#{label}</label>" unless label.empty?
+              html += "<span>#{label}</span></label>" unless label.empty?
             end
 
             html += '</fieldset>'

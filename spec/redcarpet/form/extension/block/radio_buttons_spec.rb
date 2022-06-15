@@ -20,7 +20,7 @@ RSpec.describe Redcarpet::Form::Extension::Block::RadioButtons do
       text = [['', '{value="option_1"}', 'Option 1'], ['x', '', 'Option 2'], ['x', '{}', 'Option 3']]
       allow(Redcarpet::Form::Extension::Util).to receive(:random_string).and_return('123456')
 
-      expect(described_class.html(text)).to eq('<fieldset><label><input type="radio" name="123456" value="option_1" />Option 1</label><label><input type="radio" name="123456" value="radio_2" checked />Option 2</label><label><input type="radio" name="123456" value="radio_3" checked />Option 3</label></fieldset>')
+      expect(described_class.html(text)).to eq('<fieldset><label><input type="radio" name="123456" value="option_1" /><span>Option 1</span></label><label><input type="radio" name="123456" value="radio_2" checked /><span>Option 2</span></label><label><input type="radio" name="123456" value="radio_3" checked /><span>Option 3</span></label></fieldset>')
     end
   end
 end

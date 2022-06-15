@@ -8,9 +8,9 @@ module Redcarpet
         #
         # Ex: (){value="html"} HTML (x){value="css"} CSS (){value="js"} JavaScript
         # <fieldset>
-        #   <label><input type="radio" name="123456" value="html" />HTML</label>
-        #   <label><input type="radio" name="123456" value="css" checked />CSS</label>
-        #   <label><input type="radio" name="123456" value="js" />JavaScript</label>
+        #   <label><input type="radio" name="123456" value="html" /><span>HTML</span></label>
+        #   <label><input type="radio" name="123456" value="css" checked /><span>CSS</span></label>
+        #   <label><input type="radio" name="123456" value="js" /><span>JavaScript</span></label>
         # </fieldset>
         class RadioButtons
           def self.pattern
@@ -39,7 +39,7 @@ module Redcarpet
               html += "<input #{Util.attributes_to_s(attrs)}"
               html += ' checked' if checked == 'x'
               html += ' />'
-              html += "#{label}</label>" unless label.empty?
+              html += "<span>#{label}</span></label>" unless label.empty?
             end
 
             html += '</fieldset>'
