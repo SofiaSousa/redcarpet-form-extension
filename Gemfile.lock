@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     redcarpet-form-extension (0.3.0)
-      redcarpet (~> 3.5.1)
+      redcarpet (~> 3.6.0)
 
 GEM
   remote: https://rubygems.org/
@@ -17,7 +17,7 @@ GEM
       ast (~> 2.4.1)
     rainbow (3.1.1)
     rake (12.3.3)
-    redcarpet (3.5.1)
+    redcarpet (3.6.0)
     regexp_parser (2.5.0)
     rexml (3.2.5)
     rspec (3.11.0)
@@ -59,6 +59,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-darwin-22
   x86_64-linux
 
 DEPENDENCIES
@@ -73,4 +74,4 @@ DEPENDENCIES
   simplecov
 
 BUNDLED WITH
-   2.3.3
+   2.5.4
