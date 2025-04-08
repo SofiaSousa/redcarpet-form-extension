@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'loofah'
+
 require_relative '../block/checkboxes'
 require_relative '../block/radio_buttons'
 require_relative '../block/textarea'
@@ -14,6 +16,12 @@ module Redcarpet
         class HTML < Redcarpet::Render::HTML
           def paragraph(text)
             process_custom_tags(text.strip)
+          end
+
+          def postprocess(document)
+            # Removes unknown/unsafe tags and their children
+            # https://github.com/flavorjones/loofah?tab=readme-ov-file#built-in-html-scrubbers
+            Loofah.fragment(document).scrub!(:prune).to_s
           end
 
           private
