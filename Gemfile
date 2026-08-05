@@ -27,3 +27,7 @@ gem 'simplecov', require: false, group: :test
 
 # A gem to bump versions of gems and chef-cookbooks.
 gem 'bump'
+
+# stdlib gems no longer default in Ruby 3.4+
+gem 'base64'
+gem 'ostruct'

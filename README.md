@@ -104,6 +104,25 @@ The HTML result is:
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
+### VS Code Dev Container
+
+This repository includes a dev container configuration in `.devcontainer/` using Ruby 3.4.2.
+
+1. Open the project in VS Code.
+2. Run **Dev Containers: Reopen in Container** from the Command Palette.
+3. Wait for the container build to complete. The `postCreateCommand` runs `bin/setup` automatically.
+4. On container start, `postStartCommand` verifies the environment with `ruby -v && bundle -v`.
+5. Recommended extensions are installed for this workspace: `Shopify.ruby-lsp`, `misogi.ruby-rubocop`, `GitHub.copilot`, and `GitHub.copilot-chat`.
+6. Run tests and linting inside the container:
+
+```bash
+bundle exec rspec
+bundle exec rubocop
+bundle exec rake
+```
+
+If you change `.devcontainer/devcontainer.json` or `.devcontainer/Dockerfile`, rebuild with **Dev Containers: Rebuild Container**.
+
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
