@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    redcarpet-form-extension (1.0.0)
+    redcarpet-form-extension (2.0.1)
       loofah (~> 2.25.0)
       redcarpet (~> 3.6.1)
 
@@ -106,4 +106,4 @@ DEPENDENCIES
   simplecov
 
 BUNDLED WITH
-   2.6.7
+  4.0.18
