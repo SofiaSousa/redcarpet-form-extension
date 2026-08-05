@@ -3,6 +3,8 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+
+  "runArgs": ["--name", "redcarpet-form-extension"],
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "postCreateCommand": "bash -lc 'bin/setup'",
   "postStartCommand": "bash -lc 'ruby -v && bundle -v'",
