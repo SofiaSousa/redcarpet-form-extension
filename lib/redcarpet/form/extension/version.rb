@@ -3,7 +3,7 @@
 module Redcarpet
   module Form
     module Extension
-      VERSION = '1.0.0'
+      VERSION = '2.0.0'
     end
   end
 end
