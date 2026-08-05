@@ -118,6 +118,7 @@ This repository includes a dev container configuration in `.devcontainer/` using
 ```bash
 bundle exec rspec
 bundle exec rubocop
+bundle exec bundle-audit check --update
 bundle exec rake
 ```
 

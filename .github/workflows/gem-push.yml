@@ -28,6 +28,9 @@ jobs:
     - name: Run tests
       run: bundle exec rspec
 
+    - name: Run bundle-audit
+      run: bundle exec bundle-audit check --update
+
     - name: Publish to GPR
       if: false # always skip job
       run: |
