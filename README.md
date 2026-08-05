@@ -106,7 +106,7 @@ After checking out the repo, run `bin/setup` to install dependencies. You can al
 
 ### VS Code Dev Container
 
-This repository includes a dev container configuration in `.devcontainer/` using Ruby 3.4.2.
+This repository includes a dev container configuration in `.devcontainer/` using Ruby 4.0.6.
 
 1. Open the project in VS Code.
 2. Run **Dev Containers: Reopen in Container** from the Command Palette.
