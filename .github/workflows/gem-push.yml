@@ -2,9 +2,9 @@ name: Ruby Gem
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "develop" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "develop" ]
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        # ruby-version: 3.1.x # Not needed with a .ruby-version file
+        # ruby-version: 4.0.x # Not needed with a .ruby-version file
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
     - name: Run lint
@@ -27,6 +27,9 @@ jobs:
 
     - name: Run tests
       run: bundle exec rspec
+
+    - name: Run bundle-audit
+      run: bundle exec bundle-audit check --update
 
     - name: Publish to GPR
       if: false # always skip job

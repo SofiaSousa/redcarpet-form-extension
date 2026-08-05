@@ -1,0 +1,21 @@
+{
+  "name": "redcarpet-form-extension",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "runArgs": ["--name", "redcarpet-form-extension"],
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "bash -lc 'bin/setup'",
+  "postStartCommand": "bash -lc 'ruby -v && bundle -v'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "misogi.ruby-rubocop",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ]
+    }
+  }
+}

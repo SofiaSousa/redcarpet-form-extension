@@ -1,10 +1,10 @@
-require:
+plugins:
   - rubocop-rake
   - rubocop-rspec
 
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 3.1
+  TargetRubyVersion: 4.0
   NewCops: disable
   Exclude:
     - 'vendor/**/*'
@@ -13,7 +13,7 @@ AllCops:
     - '.git/**/*'
     - 'bin/*'
 
-Naming/PredicateName:
+Naming/PredicatePrefix:
   # Method define macros for dynamically generated method.
   MethodDefinitionMacros:
     - define_method

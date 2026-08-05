@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'A Redcarpet extension with a custom HTML render to handle custom Markdown rules for tags like inputs and textareas'
   spec.homepage      = 'https://github.com/SofiaSousa/redcarpet-form-extension'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 3.1.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 4.0.0')
 
   # spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
 
@@ -29,6 +29,6 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'loofah', '~> 2.24.0'
+  spec.add_dependency 'loofah', '~> 2.25.0'
   spec.add_dependency 'redcarpet', '~> 3.6.1'
 end

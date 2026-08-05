@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in redcarpet-form-extension.gemspec
 gemspec
 
-gem 'rake', '~> 12.0'
+gem 'rake', '~> 13.0'
 
 # Behaviour Driven Development for Ruby
 gem 'rspec'
@@ -27,3 +27,10 @@ gem 'simplecov', require: false, group: :test
 
 # A gem to bump versions of gems and chef-cookbooks.
 gem 'bump'
+
+# Security scanners
+gem 'bundler-audit', require: false
+
+# stdlib gems no longer default in Ruby 3.4+
+gem 'base64'
+gem 'ostruct'
