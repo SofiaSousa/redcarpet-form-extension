@@ -19,7 +19,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        # ruby-version: 3.1.x # Not needed with a .ruby-version file
+        # ruby-version: 4.0.x # Not needed with a .ruby-version file
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
     - name: Run lint

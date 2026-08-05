@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in redcarpet-form-extension.gemspec
 gemspec
 
-gem 'rake', '~> 12.0'
+gem 'rake', '~> 13.0'
 
 # Behaviour Driven Development for Ruby
 gem 'rspec'
