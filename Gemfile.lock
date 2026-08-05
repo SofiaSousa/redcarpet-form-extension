@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     redcarpet-form-extension (1.0.0)
-      loofah (~> 2.24)
+      loofah (~> 2.25.0)
       redcarpet (~> 3.6.1)
 
 GEM
